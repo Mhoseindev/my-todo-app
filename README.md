@@ -25,15 +25,15 @@
 
 ## 🛠️ تکنولوژی‌ها
 
-| تکنولوژی | نسخه | توضیحات |
-|---|---|---|
-| [Next.js](https://nextjs.org/) | 16 | فریمورک React با SSR و App Router |
-| [React](https://react.dev/) | 19 | کتابخانه رابط کاربری |
-| [TypeScript](https://www.typescriptlang.org/) | 5 | تایپ استاتیک |
-| [Redux Toolkit](https://redux-toolkit.js.org/) | 2 | مدیریت State |
-| [Material UI](https://mui.com/) | 7 | کتابخانه کامپوننت UI |
-| [@hello-pangea/dnd](https://github.com/hello-pangea/dnd) | 18 | Drag & Drop |
-| [Vazirmatn](https://github.com/rastikerdar/vazirmatn) | 5 | فونت فارسی |
+| تکنولوژی | نسخه | توضیحات                     |
+|---|---|-----------------------------|
+| [Next.js](https://nextjs.org/) | 16 | SSR و App Router            |
+| [React](https://react.dev/) | 19 | فریمورک                     |
+| [TypeScript](https://www.typescriptlang.org/) | 5 | تایپ اسکریپت                |
+| [Redux Toolkit](https://redux-toolkit.js.org/) | 2 | مدیریت State                |
+| [Material UI](https://mui.com/) | 7 | MUI                         |
+| [@hello-pangea/dnd](https://github.com/hello-pangea/dnd) | 18 | Drag & Drop                 |
+| [Vazirmatn](https://github.com/rastikerdar/vazirmatn) | 5 | فونت فارسی                  |
 | [stylis-plugin-rtl](https://github.com/styled-components/stylis-plugin-rtl) | 2 | پشتیبانی RTL در Emotion/MUI |
 
 ---
@@ -114,10 +114,3 @@ npm run lint
 3. **حذف وظیفه** — آیکون سطل زباله قرمز را بزنید.
 4. **فیلتر** — با دکمه‌های «همه»، «فعال» و «انجام شده» وظایف را فیلتر کنید.
 5. **تغییر ترتیب** — آیکون ⠿ را بگیرید و وظیفه را بکشید و در جای دلخواه رها کنید.
-
----
-
-## 📄 لایسنس
-
-این پروژه تحت لایسنس MIT منتشر شده است.
-
