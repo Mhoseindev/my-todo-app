@@ -1,36 +1,123 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 📝 مدیریت وظایف (Task Manager)
 
-## Getting Started
+یک اپلیکیشن مدیریت وظایف با رابط کاربری فارسی و راست‌چین (RTL) که با **Next.js**، **React**، **Redux Toolkit** و **Material UI** ساخته شده است.
 
-First, run the development server:
+![Next.js](https://img.shields.io/badge/Next.js-16-black?logo=next.js)
+![React](https://img.shields.io/badge/React-19-blue?logo=react)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?logo=typescript)
+![MUI](https://img.shields.io/badge/MUI-7-007FFF?logo=mui)
+![Redux Toolkit](https://img.shields.io/badge/Redux_Toolkit-2-764ABC?logo=redux)
+
+---
+
+## ✨ امکانات
+
+- ✅ **افزودن وظیفه** — ایجاد وظیفه جدید با عنوان و توضیحات
+- ✅ **مشاهده لیست وظایف** — نمایش تمام وظایف در یک لیست
+- ✅ **تکمیل وظیفه** — علامت‌گذاری وظایف به عنوان انجام شده
+- ✅ **حذف وظیفه** — حذف وظایف از لیست
+- ✅ **فیلتر وظایف** — فیلتر بر اساس وضعیت (همه / فعال / انجام شده)
+- ✅ **کشیدن و رها کردن** — تغییر ترتیب وظایف با Drag & Drop
+- ✅ **رابط فارسی و RTL** — پشتیبانی کامل از زبان فارسی و جهت راست‌به‌چپ
+- ✅ **طراحی متریال** — استفاده از Material UI برای رابط کاربری زیبا
+
+---
+
+## 🛠️ تکنولوژی‌ها
+
+| تکنولوژی | نسخه | توضیحات |
+|---|---|---|
+| [Next.js](https://nextjs.org/) | 16 | فریمورک React با SSR و App Router |
+| [React](https://react.dev/) | 19 | کتابخانه رابط کاربری |
+| [TypeScript](https://www.typescriptlang.org/) | 5 | تایپ استاتیک |
+| [Redux Toolkit](https://redux-toolkit.js.org/) | 2 | مدیریت State |
+| [Material UI](https://mui.com/) | 7 | کتابخانه کامپوننت UI |
+| [@hello-pangea/dnd](https://github.com/hello-pangea/dnd) | 18 | Drag & Drop |
+| [Vazirmatn](https://github.com/rastikerdar/vazirmatn) | 5 | فونت فارسی |
+| [stylis-plugin-rtl](https://github.com/styled-components/stylis-plugin-rtl) | 2 | پشتیبانی RTL در Emotion/MUI |
+
+---
+
+## 📁 ساختار پروژه
+
+```
+my-todo-app/
+├── app/
+│   ├── layout.tsx          # لایه اصلی (فونت، RTL، Providers)
+│   ├── page.tsx            # صفحه اصلی اپلیکیشن
+│   ├── globals.css         # استایل‌های عمومی
+│   └── favicon.ico
+├── components/
+│   ├── StoreProvider.tsx   # پروایدر Redux + MUI Theme (RTL)
+│   ├── AddTaskForm.tsx     # فرم افزودن وظیفه جدید
+│   ├── TaskFilter.tsx      # فیلتر وظایف (همه/فعال/انجام‌شده)
+│   ├── TaskItem.tsx        # کامپوننت هر وظیفه (با Drag Handle)
+│   └── TaskList.tsx        # لیست وظایف با Drag & Drop
+├── store/
+│   ├── store.ts            # تنظیمات Redux Store
+│   ├── tasksSlice.ts       # Slice مربوط به وظایف (actions & reducers)
+│   └── hooks.ts            # هوک‌های تایپ‌شده Redux
+├── types/
+│   └── stylis-plugin-rtl.d.ts  # تایپ‌های stylis-plugin-rtl
+├── package.json
+├── tsconfig.json
+└── next.config.ts
+```
+
+---
+
+## 🚀 شروع کار
+
+### پیش‌نیازها
+
+- [Node.js](https://nodejs.org/) نسخه 18 یا بالاتر
+- npm یا yarn
+
+### نصب
+
+```bash
+# کلون پروژه
+git clone <repository-url>
+cd my-todo-app
+
+# نصب وابستگی‌ها
+npm install
+```
+
+### اجرا در محیط توسعه
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+سپس مرورگر خود را باز کرده و به آدرس [http://localhost:3000](http://localhost:3000) بروید.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### ساخت نسخه Production
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm start
+```
 
-## Learn More
+### بررسی کد (Lint)
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm run lint
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📖 نحوه استفاده
 
-## Deploy on Vercel
+1. **افزودن وظیفه** — عنوان و توضیحات را در فرم بالای صفحه وارد کرده و دکمه «افزودن وظیفه» را بزنید.
+2. **تکمیل وظیفه** — چک‌باکس کنار هر وظیفه را بزنید تا به عنوان انجام شده علامت‌گذاری شود.
+3. **حذف وظیفه** — آیکون سطل زباله قرمز را بزنید.
+4. **فیلتر** — با دکمه‌های «همه»، «فعال» و «انجام شده» وظایف را فیلتر کنید.
+5. **تغییر ترتیب** — آیکون ⠿ را بگیرید و وظیفه را بکشید و در جای دلخواه رها کنید.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📄 لایسنس
+
+این پروژه تحت لایسنس MIT منتشر شده است.
+
